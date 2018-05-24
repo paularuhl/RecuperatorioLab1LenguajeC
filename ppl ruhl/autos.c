@@ -261,7 +261,7 @@ void mostrarPropAudi (EPropietario prop[], int tp, EAuto autos[], int ta)
     {
         for(j=0; j<ta; j++)
         {
-            if((prop[i].idPropietario == autos[j].idProp ) && (autos[j].estado != VACIO) && (autos[j].marca == AUDI))
+            if((prop[i].idPropietario == autos[j].idProp ) && (prop[i].estado != VACIO ) && (autos[j].estado != VACIO) && (autos[j].marca == AUDI))
             {
                 printf("%d\t%s\t\t%s\t\t%s\n", prop[i].idPropietario,prop[i].nombreYapellido,prop[i].tarjetaDeCredito,prop[i].direccion);
                 break;
@@ -367,8 +367,8 @@ void egresosHC (egresosEst autosOut[])
     char nombreYapellido[][256]= {"Alfredo Lopez","Ana Rodriguez","Ricardo Sul", "Tefi Luzio", "Paula Ruhl", "Ruben Lamas","Sabrina Pardo","Jay Garrick","Barry Allen"};
     int marca[]= {1,3,3,1,2,3,3,4,3};
     int tiempo[]= {5,3,12,16,14,4,9,1,11};
-
-    for(int i=0; i<9; i++)
+    int i;
+    for(i=0; i<9; i++)
     {
         strcpy(autosOut[i].patente,patente[i]);
         strcpy(autosOut[i].nombreYApellido,nombreYapellido[i]);
