@@ -1,2 +1,4 @@
 # RecuperatorioLab1LenguajeC
 RecuperatorioLab1LenguajeC
+
+PAULA RUHL
